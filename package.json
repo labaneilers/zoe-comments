@@ -24,10 +24,11 @@
     "sails-disk": "~0.10.9"
   },
   "scripts": {
-    "debug": "node debug app.js",
-    "start": "node app.js",
-    "startdev": "forever -w start app.js",
-    "stopdev": "forever stop app.js"
+    "debug": "node --debug-brk app.js",
+    "start": "forever -w start app.js",
+    "stop": "forever stop app.js",
+    "logs": "forever logs app.js -f",
+    "restart": "npm stop; npm start"
   },
   "main": "app.js",
   "repository": {
